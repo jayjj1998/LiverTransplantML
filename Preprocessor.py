@@ -19,3 +19,4 @@ plt.show()
 
 normBarGraph = normalize(liverDoc['NUM_PREV_TX']).value_counts().plot(kind='bar')
 plt.show()
+
