@@ -1,2 +1,4 @@
 .idea/
 /AlteredDoc.csv
+*.pyc
+/TestClass.py

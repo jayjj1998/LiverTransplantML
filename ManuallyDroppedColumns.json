@@ -14,7 +14,6 @@
     "DIFFUSE_CHOLANG",
     "DONATION_DON",
     "DONOR_ID",
-    "END_DATE",
     "END_OPO_CTR_CODE",
     "ETHCAT",
     "ETHCAT_DON",
@@ -32,6 +31,7 @@
     "INO_PROCURE_OSTXT_1",
     "INO_PROCURE_OSTXT_2",
     "INO_PROCURE_OSTXT_3",
+    "LISTING_CTR_CODE",
     "MALIG_TY_OSTXT",
     "MALIG_TYPE",
     "MEDICAID_DON",
@@ -49,6 +49,7 @@
     "PRIV_INS_DON",
     "PT_CODE",
     "SELF_DON",
-    "TRR_ID_CODE"
+    "TRR_ID_CODE",
+    "WL_ID_CODE"
   ]
 }

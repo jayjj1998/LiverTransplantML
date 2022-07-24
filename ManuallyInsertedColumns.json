@@ -1,0 +1,11 @@
+{
+  "ColumnNames": [
+    "TX_DATE",
+    "RETXDATE",
+    "PX_STAT_DATE",
+    "DISCHARGE_DATE",
+    "ADMISSION_DATE",
+    "REFERRAL_DATE",
+    "ADMIT_DATE_DON"
+  ]
+}
