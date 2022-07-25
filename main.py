@@ -14,6 +14,7 @@ def main():
     liver_doc = prep.ChangeDateColumns(liver_doc)
     liver_doc = prep.ChangeBloodTypeColumns(liver_doc)
     liver_doc = prep.ChangeBooleanColumns(liver_doc)
+    liver_doc = prep.ChangeFloatColumns(liver_doc)
     liver_doc.to_csv(config['FilePaths']['SaveAlteredCSV'], index=False)
 
 

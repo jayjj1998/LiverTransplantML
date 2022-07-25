@@ -1,4 +1,6 @@
 import json
+
+import numpy as np
 import pandas as pd
 import traceback
 from datetime import datetime
@@ -85,10 +87,10 @@ def CreateBloodTypeCatagoryColumns(dataSeries : pd.Series):
     return newDataFrame
 
 
-def CreateBooleanColumn(dataSereies : pd.Series, oneString : str, zeroString : str):
-    newDataSeries = dataSereies.copy()
+def CreateBooleanColumn(dataSeries : pd.Series, oneString : str, zeroString : str):
+    newDataSeries = dataSeries.copy()
     try:
-        for (rowNum, rowData) in enumerate(dataSereies):
+        for (rowNum, rowData) in enumerate(dataSeries):
             if str(rowData) == oneString:
                 newDataSeries[rowNum] = 1
             elif str(rowData) == zeroString:
@@ -127,3 +129,12 @@ def GetModeValue(dataSeries : pd.Series, numOfBins : int):
             largestBin = binNum
             elementsInLargestBin = count
     return (((largestBin * binSize)*2)+binSize)/2 + minValue
+
+
+def FillMissingFloatData(dataSeries : pd.Series):
+    newDataSeries = dataSeries.copy()
+    modeValue = GetModeValue(dataSeries, 100)
+    for (rowNum, rowData) in enumerate(dataSeries):
+        if rowData is None or pd.isna(rowData) or np.isnan(rowData):
+            newDataSeries[rowNum] = modeValue
+    return dataSeries
